@@ -1,0 +1,15 @@
+{
+  "name": "my-MF-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:all": "pnpm -r run dev",
+    "build:all": "pnpm -r run build",
+    "dev:app1": "pnpm -r --filter app1 run dev",
+    "dev:app2": "pnpm -r --filter app2 run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
