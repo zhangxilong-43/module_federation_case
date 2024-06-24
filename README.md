@@ -1,0 +1,1 @@
+# module_federation_case
