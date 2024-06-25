@@ -1,4 +1,4 @@
-## 一个使用 micro-app 和 webpack 5 模块联邦搭建的微前端设想架构  
+## 一个使用 micro-app 和 webpack 5 模块联邦搭建的微前端设想架构 (A hypothetical micro-frontend architecture using micro-app and webpack 5 module federation)  
 
 # 设想架构  
 
