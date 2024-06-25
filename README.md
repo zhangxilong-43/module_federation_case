@@ -20,5 +20,5 @@
 
 # 运行  
 
-1、pnpm i
-2、pnpm dev
+1、pnpm i   
+2、pnpm dev  
