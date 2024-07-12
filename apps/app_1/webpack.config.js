@@ -77,28 +77,30 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {
         // 为什么要这样写？详见： https://github.com/module-federation/module-federation-examples/issues/1142
-        app_2: `promise new Promise(resolve => {
-          const remoteUrl = 'http://127.0.0.1:3002/remoteEntry.js'
-          const script = document.createElement('script')
-          script.src = remoteUrl
-          script.onload = () => {
-            console.log(window, window.rawWindow, window.app_2, 'app_2')
-            const proxy = {
-              get: (request) => window.app_2.get(request),
-              init: (arg) => {
-                try {
-                  return window.app_2.init(arg)
-                } catch(e) {
-                  console.log('remote container already initialized')
-                }
-              }
-            }
-            resolve(proxy)
-          }
-          document.head.appendChild(script);
-        })
-        `
+        // app_2: `promise new Promise(resolve => {
+        //   const remoteUrl = 'http://127.0.0.1:3002/remoteEntry.js'
+        //   const script = document.createElement('script')
+        //   script.src = remoteUrl
+        //   script.onload = () => {
+        //     console.log(window, window.rawWindow, window.app_2, 'app_2')
+        //     const proxy = {
+        //       get: (request) => window.app_2.get(request),
+        //       init: (arg) => {
+        //         try {
+        //           return window.app_2.init(arg)
+        //         } catch(e) {
+        //           console.log('remote container already initialized')
+        //         }
+        //       }
+        //     }
+        //     resolve(proxy)
+        //   }
+        //   document.head.appendChild(script);
+        // })
+        // `
+        // 'app_2': 'app_2@http://127.0.0.1:3002/remoteEntry.js',
       },
+      // runtimePlugins: [path.resolve(__dirname, './custom-runtime-plugin.js')],
       shared: {
         ...deps,
         'react-router-dom': {
